@@ -1,1 +1,25 @@
-<!-- Soalan pertempuran -->
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pertempuran Ilmu</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="battle-container">
+    <h2>Stage <span id="stageNum"></span></h2>
+    <div id="questionBox"></div>
+
+    <div id="choicesBox"></div>
+    <p id="timer">Masa: <span id="timeLeft">...</span> saat</p>
+    <p id="feedback"></p>
+
+    <button id="nextBtn" style="display:none">Soalan Seterusnya</button>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/gameData.js"></script>
+  <script src="js/battle.js"></script>
+</body>
+</html>
