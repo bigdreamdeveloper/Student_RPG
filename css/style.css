@@ -1,1 +1,45 @@
-/* Gaya retro ala Pokémon */
+/* Global Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.character-select {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.character-select img {
+  width: 160px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.character-select img:hover {
+  transform: scale(1.05);
+}
+
+.selected {
+  border: 4px solid #007bff;
+  border-radius: 10px;
+}
