@@ -1,1 +1,64 @@
-<!-- Pemilihan nama + watak -->
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IlmuQuest - Mula Permainan</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>IlmuQuest: Pengembaraan Si Bijak</h1>
+
+    <label for="playerName">Masukkan Nama Anda:</label>
+    <input type="text" id="playerName" placeholder="Contoh: Ali" />
+
+    <p>Pilih Watak:</p>
+    <div class="character-select">
+      <label>
+        <input type="radio" name="character" value="boy" checked />
+        <img src="img/player-boy.png" alt="Lelaki" class="sprite" />
+      </label>
+      <label>
+        <input type="radio" name="character" value="girl" />
+        <img src="img/player-girl.png" alt="Perempuan" class="sprite" />
+      </label>
+    </div>
+
+    <button id="startBtn">Mula Pengembaraan</button>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script>
+    document.getElementById("startBtn").addEventListener("click", function () {
+      const name = document.getElementById("playerName").value.trim();
+      const character = document.querySelector('input[name="character"]:checked').value;
+
+      if (!name) {
+        alert("Sila masukkan nama anda!");
+        return;
+      }
+
+      const playerData = {
+        name,
+        character,
+        level: 1,
+        stats: {
+          strength: 1,
+          intel: 1,
+          health: 5,
+          luck: 1,
+          agility: 1
+        },
+        unlockedMap: 1,
+        inventory: [],
+        skills: [],
+        exp: 0
+      };
+
+      savePlayerData(playerData); // function dari storage.js
+      window.location.href = "map.html";
+    });
+  </script>
+</body>
+</html>
