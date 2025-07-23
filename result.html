@@ -1,1 +1,28 @@
-<!-- Keputusan menang/kalah -->
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keputusan Pertempuran</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Tahniah, <span id="playerName"></span>!</h1>
+    <p>Anda telah menamatkan Stage <span id="stageNum"></span>.</p>
+    <p>EXP semasa: <span id="playerExp"></span></p>
+
+    <button onclick="window.location.href='map.html'">Kembali ke Peta</button>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script>
+    const player = loadPlayerData();
+    const stage = localStorage.getItem("currentStage") || "-";
+
+    document.getElementById("playerName").textContent = player.name;
+    document.getElementById("stageNum").textContent = stage;
+    document.getElementById("playerExp").textContent = player.exp;
+  </script>
+</body>
+</html>
