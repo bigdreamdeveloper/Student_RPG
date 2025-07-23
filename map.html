@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>IlmuQuest - Peta</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="retro">
+  <h2>🗺️ Peta Ilmu - Zon 1</h2>
+  <div id="playerInfo"></div>
+
+  <div class="map-grid">
+    <!-- Setiap petak boleh jadi level -->
+    <button onclick="startBattle(1)">🧠 Level 1</button>
+    <button onclick="startBattle(2)" disabled>🔒 Level 2</button>
+    <button onclick="startBattle(3)" disabled>🔒 Level 3</button>
+    <button onclick="startBattle('boss')" disabled>👑 Boss</button>
+  </div>
+
+  <script>
+    const player = JSON.parse(localStorage.getItem("player"));
+    document.getElementById("playerInfo").innerText =
+      `Selamat datang, ${player.name} (${player.gender}) - Tahap ${player.level}`;
+
+    function startBattle(level) {
+      localStorage.setItem("currentLevel", level);
+      window.location.href = "battle.html";
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body.retro {
+  background: #111;
+  color: #fff;
+  font-family: 'Press Start 2P', monospace;
+  text-align: center;
+  padding: 20px;
+}
+
+input, button {
+  font-family: 'Press Start 2P', monospace;
+  padding: 8px;
+  margin: 5px;
+}
+
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  background: #333;
+  color: white;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
