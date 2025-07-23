@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IlmuQuest - Peta Pengembaraan</title>
+  <title>Peta Pengembaraan</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <div class="container">
-    <h2>Selamat Datang, <span id="playerName"></span>!</h2>
-    <p>Pilih Tahap Untuk Bermula:</p>
+  <h1>Selamat Datang ke Dunia Ilmu!</h1>
+  <p id="playerName">Nama Pemain: ...</p>
+  <div id="spriteContainer"></div>
 
-    <div id="mapStages" class="map-stages"></div>
+  <h2>Pilih Stage:</h2>
+  <div id="stageButtons"></div>
 
-    <button onclick="resetProgress()">🔁 Mula Semula</button>
-  </div>
+  <button onclick="resetGame()">Reset Game</button>
 
   <script src="js/storage.js"></script>
+  <script src="js/gameData.js"></script>
   <script src="js/map.js"></script>
 </body>
 </html>
+
