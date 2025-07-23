@@ -1,1 +1,22 @@
-<!-- Peta / Zon -->
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IlmuQuest - Peta Pengembaraan</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Selamat Datang, <span id="playerName"></span>!</h2>
+    <p>Pilih Tahap Untuk Bermula:</p>
+
+    <div id="mapStages" class="map-stages"></div>
+
+    <button onclick="resetProgress()">🔁 Mula Semula</button>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
